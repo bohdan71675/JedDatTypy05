@@ -7,6 +7,7 @@ int main()
 {
     char x;
     int male = 0, velke = 0, cisla = 0, operatory = 0, jiny = 0;
+    char suda = 0;
     bool obsahuje = false;
     cout << "Zadavej znaky zakoncena (\\): " << endl;
     cin >> x;
@@ -36,13 +37,14 @@ int main()
         if (x >= '0' && x <= '9' && x % 2 == 0)
         {
             obsahuje = true;
+            suda = x;
         }
 
         cin >> x;
     }
     if (obsahuje)
     {
-        cout << "Ano obsahovalo sudou cifru " << "\nPocet malych " << male << "\nPocet velkych " << velke << "\nPocet cifer " << cisla << "\nPocet operatoru " << operatory << "\nPocet jinych " << jiny << endl;
+        cout << "Ano obsahovalo sudou cifru " << suda << "\nPocet malych " << male << "\nPocet velkych " << velke << "\nPocet cifer " << cisla << "\nPocet operatoru " << operatory << "\nPocet jinych " << jiny << endl;
     }
     else
     {
